@@ -13,4 +13,9 @@
 
 body{
   background-color: rgba(110, 42, 155, 1);
+  color: var(--white);
+}
+
+section{
+  display: flex;
 }

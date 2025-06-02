@@ -5,13 +5,17 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import './index.css'
 import App from './App.jsx'
 import UsersList from './userslist.jsx'
+import Dashboard from './Dashboard.jsx'
+import ListsList from './listslist.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/userslist' element={<UsersList/>}/>
+        <Route path='/listslist' element={<ListsList/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
