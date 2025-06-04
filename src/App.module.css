@@ -1,12 +1,12 @@
-.wrapLogin{
+.wrapLogin {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     flex-wrap: wrap;
-}
+  }
 
-.wrapLog{
+  .wrapLog {
     width: 50%;
     height: 100vh;
     background-image: url('./assets/img/bg-img.jpg');
@@ -15,18 +15,26 @@
     background-position: center;
     position: relative;
     animation: nois 1s linear;
+    position: relative;
+    z-index: 0;
 }
 
-.degrade{
+  .degrade {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,rgba(110, 42, 155, 1) 0%, rgba(251, 255, 0, 0) 100%);
-}
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
 
-.wrapForm{
+  .wrapForm {
     width: 50%;
     height: 100vh;
     display: flex;
@@ -34,20 +42,20 @@
     justify-content: center;
     background-color: rgba(110, 42, 155, 1);
     color: var(--white);
-}
+  }
 
-.wrapForm form{
-    height: 300px;
+.wrapForm form {
     width: 300px;
-    border: 2px solid white;
+    height: auto;
     padding: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 24px rgba(169, 169, 252, 0.5);
     display: flex;
     flex-direction: column;
+    gap: 2vh;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    box-shadow: 8px 8px 24px 0px rgb(169, 169, 252);
-    gap: 2vh;
     animation: faderight 1s ease-in-out;
 }
 
@@ -55,20 +63,19 @@
     color: var(--light);
     width: 100%;
     text-shadow: var(--light) 0px 5px 15px;
+    text-align: center;
 }
 
 .wrapForm input{
-    padding: 10px;
-    border-radius: 10px;
     width: 100%;
-    border: none;
-    border: 2px solid var(--light);
-    background-color: var(--white);
-    color: rgb(39, 39, 39);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--light);
+  background-color: var(--white);
+  color: #272727;
 }
 
 .wrapForm input:focus{
-    outline: none;
     outline: 2px solid rgb(0, 46, 252);
 }
 
@@ -77,34 +84,61 @@
 }
 
 .wrapForm button{
-    padding: 10px;
-    border-radius: 10px;
     width: 100%;
-    border: none;
-    background-color: var(--dark);
-    transition: all 200ms ease-in-out;
-    color: var(--light);
-    border: 2px solid var(--light);
-    font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--dark);
+  color: var(--light);
+  border: 2px solid var(--light);
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
 }
 
 .wrapForm button:hover{
-    border: 2px solid transparent;
     background-color: var(--light);
-    color: var(--white);
-    cursor: pointer;
-    box-shadow: var(--light) 0px 5px 15px;
+  color: var(--white);
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 5px 15px var(--light);
 }
 
 .wrapForm .userCad{
     color: var(--white);
     opacity: 0.5;
     font-size: 0.7rem;
+    transition: opacity 0.3s;
 }
 
 .wrapForm .userCad:hover{
     opacity: 1;
     cursor: pointer;
+}
+
+.wrapContact {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+    top: -200px;
+}
+
+.wrapContact button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgb(48, 48, 48);
+    border: 2px solid var(--light);
+    color: var(--light);
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.wrapContact button:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
 @keyframes faderight {

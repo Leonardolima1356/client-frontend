@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import style from './App.module.css'
 import { api } from './api/api'
 import { useNavigate } from 'react-router'
+import Contact from './Contact'
 
 function App() {
   const navigate = useNavigate()
@@ -34,6 +35,10 @@ function App() {
     }
   }
 
+  const handleContactClick = () => {
+    navigate('/contact')
+  }
+
   return (
     <div className={style.wrapLogin}>
 
@@ -47,9 +52,11 @@ function App() {
             <input type="password" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} required/>
           <button type="submit">entrar</button>
           <p>{message}</p>
+            <div className={style.wrapContact}>
+              <button onClick={handleContactClick}>Entrar em Contato</button>
+            </div>
           </form>
         </div>
-
     </div>
   )
 }
